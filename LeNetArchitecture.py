@@ -25,12 +25,12 @@ lenet_model = Sequential([
 lenet_model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 #training the LeNet model and saving history
-history = lenet_model.fit(train_image, train_label, 
-                        epochs=20, 
+history = cnn_model.fit(X_train, y_train, 
+                        epochs=50, 
                         batch_size=16,
                         verbose=1, 
-                        validation_data=(test_image, test_label))
-
+                        validation_data=(X_test, y_test),
+                        callbacks=[early_stopping])
 #LeNet model Summary
 lenet_model.summary()
 
