@@ -1,3 +1,19 @@
+```bash
+import numpy as np
+import matplotlib.pyplot as plt
+import tensorflow as tf
+import tensorflow.keras as keras
+import warnings
+warnings.filterwarnings("ignore")
+
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, SimpleRNN, Dense, Dropout
+from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.utils import  plot_model
+```
+
 ##### Introduction
 
 Welcome to the Deep Learning for Digit Classification, This repository is dedicated to exploring the fascinating world of deep learning in the context of digit classification. Digit classification is a fundamental problem in computer vision, and it serves as a building block for many real-world applications, including optical character recognition (OCR) and digit-based data analysis.
